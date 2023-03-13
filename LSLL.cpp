@@ -37,10 +37,10 @@ bool List::isFull(){
 
 void List::insertData(const int& p, const int& e){
     if(isFull()){
-        throw listException("posicion invalida, insertData");
+        throw listException("desbordamiento de Datos, insertData");
     }
 
-    if(p!=1 and !isValidPos(p)){
+    if(p != -1 and !isValidPos(p)){
         throw  listException("posicion invalida, insertData");
         return;
     }
